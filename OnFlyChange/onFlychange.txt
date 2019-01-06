@@ -1,0 +1,24 @@
+Below generic preprocessor to convert JSP pages to htmls and serving those htmls to Karma using 'gulp-inline-ng2-template/parser'
+
+genericPreprocessor: {
+	rules: [{
+		process: function (content, file, done, log) {
+			//Prepare content for parser
+			file.contents = new Buffer(content);
+			// Every file has a parser					
+			var parse = require('gulp-inline-ng2-template/parser')(file, { base: "", templateExtension: '.jsp', useRelativePaths: false, customFilePath: defaultCustomFilePath });
+			function defaultCustomFilePath(ext, path) {
+				if (ext[0] === '.jsp') {
+					path = path.replace("\\resources\\js\\angular", "\\webapp");
+				} 
+				console.log(path);
+				return path;
+			}
+			// Call real parse function
+			parse(function (err, contents) {
+				// Callback with content with template and style inline
+				done(contents);
+			});
+		}
+	}]
+}
