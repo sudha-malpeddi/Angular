@@ -1,0 +1,61 @@
+.billRef_margin {
+	margin-top: 342px;
+	margin-left: 328px;
+}
+
+.PopUpBorder2 {
+	text-align:left;
+	background:none;
+	width:400px;
+	position:relative;
+	left:10%;
+}
+
+.post_pop { 
+	position:relative; 
+	top:-100px; 
+	left:-100px; 
+	_position:none; 
+	_top:0; 
+	_left:0;
+}
+
+.block-ui-spinner, .block-ui-template {
+	top: 18% !important;
+	transform: translateY(18%) translateX(35%) !important;
+	cursor : auto;
+}
+
+.PopUpBorder_top2_new {
+	background: url(../images/lightbox_top2.gif) no-repeat;
+	font-size: 0px;
+	height: 8px;
+	width: 397px;
+}
+
+.PopUpBorder_content3 {
+	width:315px!important;
+	border-left:4px solid #333333;
+	border-right:4px solid #333333;
+	border-bottom-style:none!important;
+	border-top-style:none!important;
+	padding:31px 37px;
+	background:white;
+	clear:both;
+}
+
+.lightbox_close_new {
+	float: right;
+	position: relative;
+}
+
+.lightbox_close_new a {
+	background: transparent url(../images/lightbox_close.png) no-repeat;
+	display: block;
+	height: 48px;
+	width: 49px;
+	cursor: pointer;
+	position: absolute;
+	top: -50px;
+	right: -55px;
+}
